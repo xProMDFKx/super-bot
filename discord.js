@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const embed = new Discord.RichEmbed()
-const prefix = "/"
+const prefix = "€"
 client.on('message', message => {
   let args = message.content.split(" ").slice(1);
 
@@ -28,18 +28,18 @@ if (message.content.startsWith(prefix + 'serverinfo')) {
   
 }
 //SCA
-    if (message.content === '/help') {
+    if (message.content === '€help') {
     	message.reply('Salut, eu am fost creat de ***@_xProMDFKx_#0957*** \n \n***Comenzi*** \n/serverinfo - Informatii despre server \n/help - Comenzile serverului \n/say - Botul iti scrie mesajul \n/staff - Vezi administratorii serverului \n/ping - Vezi pingul tau \n/salut - Trimite cuiva un salut \n/mass - Trimite un mesaj tuturor (Doar ownerii)');
       
     }  
 //SFSA
-    if (message.content === "/salut") { // creates the command cookie
+    if (message.content === "€salut") { // creates the command cookie
         if (args[1]) message.channel.send(message.author.toString() + " has given " + args[1].toString() + " a cookie! :cookie:") // sends the message saying someone has given someone else a cookie if someone mentions someone else
         else message.channel.send("Vrei sa ii trimi cuiva un salut? :heavy_check_mark: (Exemplu: /salut @username)") // sends the error message if no-one is mentioned
       
     }
 //SFSA
-    if (message.content === "/staff") { // creates the command cookie
+    if (message.content === "€staff") { // creates the command cookie
   const embed = new Discord.RichEmbed()
   embed.setTitle("**Staff**\n")
   embed.addField('Moldoveanu#2789', message.Join, false)
@@ -63,7 +63,7 @@ if (message.content.startsWith(prefix + 'serverinfo1235')) {
 });
 
 client.on('message', message => {
-    if(message.content.startsWith("/ping")) {
+    if(message.content.startsWith("€ping")) {
             message.reply(new Date().getTime() - message.createdTimestamp + " ms, pingul tau");      
     }
 });
@@ -78,11 +78,11 @@ if (msg.content.startsWith(`-memes`)) {
 })
 
 client.on('ready', () => {
-  client.user.setGame('/help pentru comenzi', 'https://www.twitch.tv/streamerhouse', '/help pentru comenzi')
+  client.user.setGame('€help pentru comenzi', 'https://www.twitch.tv/streamerhouse', '/help pentru comenzi')
 })
 
 client.on('message', message => {
-if(message.content.startsWith('/mass')) {
+if(message.content.startsWith('€mass')) {
     if(message.author.id === "279673236353056771"){
         let args = message.content.split(" ").slice(1);
         var argresult = args.join(" ")
